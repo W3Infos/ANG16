@@ -48,3 +48,4 @@ Add Class in Models
 
 >>> Add-Migration
 >>> update database
+Note: Database created in SQL server with PMSDb
