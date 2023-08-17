@@ -21,3 +21,30 @@ if not have latest install
 
 >>>ng build
 >>> ng serve -o
+
+
+------------------------------------
+
+Create .Net Core WebAPI Empty Project
+open appsettings.json
+add 
+"ConnectionStrings": {
+    "PMSDbConnectionString": "server=servername;database=PMSDb;user id=sa;Password=123456;Trusted_Connection=True;TrustedServerCertificate=False",
+    //"PMSDbConnectionString": "Server=servername;Database=PMSDb;user id=sa;Password=123456;Encrypt=False"
+}
+
+
+------------------------------------------
+Add Class in Models
+
+ public class Product
+ {
+     public Guid Id { get; set; }
+     public string? Name { get; set; }
+     public string? Type { get; set; }
+     public string? Color { get; set; }
+     public decimal Price { get; set; }
+ }
+
+>>> Add-Migration
+>>> update database
